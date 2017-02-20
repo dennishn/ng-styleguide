@@ -1,0 +1,18 @@
+@import "../../../shared/ui/styles/functions/map-deep-get";
+@import "../../../shared/ui/styles/variables/ui";
+@import "../../../shared/ui/styles/variables/bootstrap";
+
+.sg-color-col {
+  display: flex;
+}
+
+.sg-color-card {
+  width: 100%;
+  .card-block {
+    padding: map-deep-get($spacers, 1, x);
+  }
+
+  .card-palette {
+    height: 100px;
+  }
+}

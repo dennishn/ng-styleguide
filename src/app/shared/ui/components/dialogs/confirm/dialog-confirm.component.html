@@ -1,0 +1,27 @@
+<div class="modal-header"
+     [ngClass]="{'bg-danger text-white': state === 'danger'}">
+    <p class="modal-title">{{title}}</p>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div *ngIf="body">
+        {{body}}
+    </div>
+    <div *ngIf="bodyHtml" [innerHtml]="bodyHtml"></div>
+</div>
+<div class="modal-footer">
+    <button type="button"
+            class="btn btn-sm"
+            [ngClass]="{'btn-danger': state === 'danger'}"
+            (click)="activeModal.close()">
+        {{confirmButton}}
+    </button>
+
+    <button type="button"
+            class="btn btn-secondary btn-sm"
+            (click)="activeModal.dismiss()">
+        {{cancelButton}}
+    </button>
+</div>

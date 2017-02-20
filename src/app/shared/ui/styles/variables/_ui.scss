@@ -1,0 +1,43 @@
+$grays: (
+  black: #181818,
+  charcoal-grey: #292f34,
+  charcoal-grey-two: #3b4752,
+  slate-grey: #626c75,
+  cool-grey-two: #b0b4ba,
+  silver-two: #c0c3c8,
+  pale-grey: #e6e6e9
+);
+
+$colors-rose-quartz: (
+  light-salmon: #ff9e9c,
+  pale-salmon: #fda8a6,
+  pale-salmon-two: #fab8b6,
+  rose-quartz: #f7cac9,
+  light-tan: #f9d4d4,
+  pale-rose: #fadedf,
+  very-light-pink: #fce9e9
+);
+$colors-serenity: (
+  greyblue-two: #657591,
+  bluegrey: #6e7e9d,
+  greyblue: #7b8eb1,
+  serenity: #92a8d1,
+  cloudy-blue: #a8b8da,
+  light-blue-grey-two: #becae3,
+  light-blue-grey: #d3dbed
+);
+
+$colors-misc: (
+  silver: #e6e7e9,
+  cool-grey: #b0b5ba,
+  silver-20: rgba(230, 231, 233, 0.2),
+  red: #c45552,
+  red-5: rgba(196, 85, 82, 0.05),
+  green: #56b774,
+  green-5: rgba(86, 183, 116, 0.05),
+  yellow: #b6ae43,
+  yellow-5: rgba(182, 174, 67, 0.05),
+);
+
+$gradient-serenity-rose-quartz: linear-gradient(to top, map_get($colors-serenity, serenity), map_get($colors-rose-quartz, rose-quartz));
+$gradient-rose-quartz-serenity: linear-gradient(to top, map_get($colors-rose-quartz, rose-quartz), map_get($colors-serenity, serenity));

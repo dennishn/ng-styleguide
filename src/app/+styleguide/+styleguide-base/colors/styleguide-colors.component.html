@@ -1,0 +1,96 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="display-4">Colors</h1>
+        <hr>
+    </div>
+    <div class="col-sm-12">
+        <p class="lead">
+            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+        </p>
+    </div>
+</div>
+
+<div class="row py-5">
+    <div class="col-sm-12">
+        <h1>Rose-Quartz</h1>
+    </div>
+    <div class="col sg-color-col" *ngFor="let color of colorsRosequartz">
+        <div class="card sg-color-card text-center">
+            <div [class]="'card-palette bg-' + color"></div>
+
+            <div class="card-block">
+                <small class="card-text">
+                    <code>${{color}}</code>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row py-5">
+    <div class="col-sm-12">
+        <h1>Serenity</h1>
+    </div>
+    <div class="col sg-color-col" *ngFor="let color of colorsSerenity">
+        <div class="card sg-color-card text-center">
+            <div [class]="'card-palette bg-' + color"></div>
+
+            <div class="card-block">
+                <small class="card-text">
+                    <code>${{color}}</code>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row py-5">
+    <div class="col-sm-12">
+        <h1>Grays</h1>
+    </div>
+    <div class="col sg-color-col" *ngFor="let color of grays">
+        <div class="card sg-color-card text-center">
+            <div [class]="'card-palette bg-' + color"></div>
+
+            <div class="card-block">
+                <small class="card-text">
+                    <code>${{color}}</code>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row py-5">
+    <div class="col-sm-12">
+        <h1>Colors Misc <small>WIP</small></h1>
+    </div>
+    <div class="col sg-color-col" *ngFor="let color of colorsMisc">
+        <div class="card sg-color-card text-center">
+            <div [class]="'card-palette bg-' + color"></div>
+
+            <div class="card-block">
+                <small class="card-text">
+                    <code>${{color}}</code>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row py-5">
+    <div class="col-sm-12">
+        <h1>Gradients</h1>
+    </div>
+    <div class="col sg-color-col" *ngFor="let color of gradients">
+        <div class="card sg-color-card text-center">
+            <div [class]="'card-palette bg-' + color"></div>
+
+            <div class="card-block">
+                <small class="card-text">
+                    <code>${{color}}</code>
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
