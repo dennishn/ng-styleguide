@@ -3,16 +3,16 @@
 @import "../../../shared/ui/styles/variables/bootstrap";
 
 .sg-color-col {
-  display: flex;
+	display: flex;
 }
 
 .sg-color-card {
-  width: 100%;
-  .card-block {
-    padding: map-deep-get($spacers, 1, x);
-  }
+	width: 100%;
+	.card-block {
+		padding: map-deep-get($spacers, 1, x);
+	}
 
-  .card-palette {
-    height: 100px;
-  }
+	.card-palette {
+		height: 100px;
+	}
 }

@@ -1,1 +1,1 @@
-export { StyleguideComponentsModule } from './styleguide-components.module';
+export {StyleguideComponentsModule} from './styleguide-components.module';

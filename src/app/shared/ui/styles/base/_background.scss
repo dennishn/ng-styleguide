@@ -2,22 +2,25 @@
 @import "~bootstrap/scss/mixins/_hover";
 
 @each $key, $value in $colors-serenity {
-  @include bg-variant('.bg-#{$key}', $value);
+	@include bg-variant('.bg-#{$key}', $value);
 }
+
 @each $key, $value in $colors-rose-quartz {
-  @include bg-variant('.bg-#{$key}', $value);
+	@include bg-variant('.bg-#{$key}', $value);
 }
+
 @each $key, $value in $grays {
-  @include bg-variant('.bg-#{$key}', $value);
+	@include bg-variant('.bg-#{$key}', $value);
 }
+
 @each $key, $value in $colors-misc {
-  @include bg-variant('.bg-#{$key}', $value);
+	@include bg-variant('.bg-#{$key}', $value);
 }
 
 .bg-gradient-serenity-rose-quartz {
-  background-image: $gradient-serenity-rose-quartz;
+	background-image: $gradient-serenity-rose-quartz;
 }
 
 .bg-gradient-rose-quartz-serenity {
-  background-image: $gradient-rose-quartz-serenity;
+	background-image: $gradient-rose-quartz-serenity;
 }

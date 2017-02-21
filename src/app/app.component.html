@@ -1,32 +1,67 @@
-<nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse">
-
-    <button class="navbar-toggler navbar-toggler-right"
-            type="button"
-            (click)="navBarCollapsed = !navBarCollapsed"
-            [attr.aria-expanded]="!navBarCollapsed"
-            aria-controls="navBar"
-            aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <a class="navbar-brand" href="#">Vapor Cloud</a>
-
-    <div class="navbar-collapse collapse"
-         id="navBar"
-         [ngbCollapse]="navBarCollapsed">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item" routerLinkActive="active">
-                <a class="nav-link" [routerLink]="['/styleguide']">
-                    Styleguide
-                </a>
-            </li>
-        </ul>
-
-    </div>
-</nav>
-
-<div class="container-fluid">
-    <router-outlet></router-outlet>
+<div class="shell-page-sidebar" [ngClass]="{'shell-page-sidebar--fixed': !sidebarCollapsed}">
+    <button class="btn btn-block btn-default" (click)="toggleSidebar()">CLICK TEST</button>
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            Base
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['../base/colors']" routerLinkActive="active">
+                Colors
+            </a>
+        </li>
+    </ul>
+    
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            Components
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['../components/dialogs/confirm']" routerLinkActive="active">
+                Confirm dialog
+            </a>
+        </li>
+    </ul>
 </div>
+<div class="shell-page-container">
+    <div class="shell-page-header">
+    
+    </div>
+    
+    <div class="shell-page-content-wrapper">
+        <div class="shell-page-content">
+            
+            <!--Main View-->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
+<!--<nav class="navbar navbar-toggleable-sm navbar-inverse fixed-top bg-inverse">-->
+
+<!--<button class="navbar-toggler navbar-toggler-right"-->
+<!--type="button"-->
+<!--(click)="navBarCollapsed = !navBarCollapsed"-->
+<!--[attr.aria-expanded]="!navBarCollapsed"-->
+<!--aria-controls="navBar"-->
+<!--aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+
+<!--<a class="navbar-brand" href="#">Vapor Cloud</a>-->
+
+<!--<div class="navbar-collapse collapse"-->
+<!--id="navBar"-->
+<!--[ngbCollapse]="navBarCollapsed">-->
+<!--<ul class="navbar-nav mr-auto">-->
+<!--<li class="nav-item" routerLinkActive="active">-->
+<!--<a class="nav-link" [routerLink]="['/styleguide']">-->
+<!--Styleguide-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--</div>-->
+<!--</nav>-->
+
 
 <template ngbModalContainer></template>

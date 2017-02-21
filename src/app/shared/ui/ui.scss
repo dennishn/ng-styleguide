@@ -1,6 +1,12 @@
 //@import "styles/functions/map-deep-get";
-
 @import "styles/variables/ui";
 @import "styles/variables/bootstrap";
-
+/**
+	Font Faces
+ */
+@import "styles/base/fonts";
+/**
+	Core App Shell
+ */
+@import "shell/shell";
 @import "styles/base/background";

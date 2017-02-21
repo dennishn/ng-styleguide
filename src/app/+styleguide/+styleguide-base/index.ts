@@ -1,1 +1,1 @@
-export { StyleguideBaseModule } from './styleguide-base.module';
+export {StyleguideBaseModule} from './styleguide-base.module';

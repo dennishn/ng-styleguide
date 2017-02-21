@@ -37,9 +37,9 @@ const APP_PROVIDERS = [
 ];
 
 type StoreType = {
-    state:InternalStateType,
-    restoreInputValues:() => void,
-    disposeOldHosts:() => void
+    state: InternalStateType,
+    restoreInputValues: () => void,
+    disposeOldHosts: () => void
 };
 
 /**
@@ -67,11 +67,11 @@ type StoreType = {
 })
 export class AppModule {
 
-    constructor(public appRef:ApplicationRef,
-                public appState:AppState) {
+    constructor(public appRef: ApplicationRef,
+                public appState: AppState) {
     }
 
-    public hmrOnInit(store:StoreType) {
+    public hmrOnInit(store: StoreType) {
         if (!store || !store.state) {
             return;
         }
@@ -89,7 +89,7 @@ export class AppModule {
         delete store.restoreInputValues;
     }
 
-    public hmrOnDestroy(store:StoreType) {
+    public hmrOnDestroy(store: StoreType) {
         const cmpLocation = this.appRef.components.map((cmp) => cmp.location.nativeElement);
         // save state
         const state = this.appState._state;
@@ -102,7 +102,7 @@ export class AppModule {
         removeNgStyles();
     }
 
-    public hmrAfterDestroy(store:StoreType) {
+    public hmrAfterDestroy(store: StoreType) {
         // display new elements
         store.disposeOldHosts();
         delete store.disposeOldHosts;

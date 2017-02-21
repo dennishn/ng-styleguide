@@ -1,0 +1,45 @@
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+
+	// bgc?
+
+}
+
+.shell-page-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.shell-page-sidebar {
+	position: fixed;
+	top: 0;
+	right: auto;
+	bottom: 0;
+	left: $shell-page-sidebar-width-collapsed - $shell-page-sidebar-width;
+	overflow: hidden;
+
+	width: $shell-page-sidebar-width;
+
+	z-index: $zindex-navbar;
+
+	background-color: $shell-page-sidebar-background-color;
+
+	transition: transform $transition-base;
+	backface-visibility: hidden;
+	perspective: 1000px;
+
+	&--fixed {
+		//transition: none;
+		transform: translate3d(($shell-page-sidebar-width - $shell-page-sidebar-width-collapsed), 0, 0) !important;
+	}
+}
+
+.shell-page-sidebar:not(.shell-page-sidebar--fixed) {
+	&:hover {
+		transform: translate3d(($shell-page-sidebar-width - $shell-page-sidebar-width-collapsed), 0, 0);
+	}
+}
+
